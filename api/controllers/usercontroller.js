@@ -60,7 +60,8 @@ const login = async (req, res) => {
                         name: checkUser.username,
                         email: checkUser.email,
                         gender: checkUser.gender,
-                        joining: checkUser.joining
+                        joining: checkUser.joining,
+                        role : checkUser.role
                     },
                     process.env.JWT_SECRET
                     )
