@@ -30,14 +30,14 @@ const productByID = async (req, res) => {
 
 const createProduct = async (req, res) => {
   
-  const { productname, price, image, brand, category } = req.body;
+  const { productname, price, image, author, category, publisher } = req.body;
 
-    if (productname && price && image && brand && category) {
+    if (productname && price && image && author && category && publisher) {
         try {
             await connect(process.env.MONGO_URI)
             const checkProduct = await productSchema.exists({ productname })
             if (!checkProduct) {
-                await productSchema.create({ productname, price, image, brand, category })
+                await productSchema.create({ productname, price, image, author, category, publisher })
                 res.status(201).json({ message: "Product Created Successfully" })
             }
 
