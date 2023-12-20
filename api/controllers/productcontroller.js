@@ -30,7 +30,7 @@ const productByID = async (req, res) => {
 
 const createProduct = async (req, res) => {
   
-  const { productname, price, image, author, category, publisher } = req.body;
+  const { productname, price, author, category, publisher } = req.body;
 
     if (productname && price && author && category && publisher) {
         try {
