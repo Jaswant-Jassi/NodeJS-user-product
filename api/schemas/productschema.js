@@ -21,7 +21,7 @@ const productSchema = new Schema({
         type: String, required: true 
     },
     publicationyear: {
-        type: String, required: true 
+        type: Number, required: true 
     },
 
 
