@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose')
 
 const productSchema = new Schema({
-    images: {
-        type: String, required: true"
+    image: {
+        type: String, required: true, default: "data:https://icons8.com/icon/115643/unavailable"
     },
     
     price: {
